@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.kksk.kumuluzee.sample</groupId>
+	<artifactId>jax-rs.cdi</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+		<java.version>8</java.version>
+		<file.encoding>UTF-8</file.encoding>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+		<project.build.sourceEncoding>${file.encoding}</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>${file.encoding}</project.reporting.outputEncoding>
+		<skipTests>true</skipTests>
+		<provided.scope>provided</provided.scope>
+
+		<kumuluzee.version>2.5.2</kumuluzee.version>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.kumuluz.ee</groupId>
+				<artifactId>kumuluzee-bom</artifactId>
+				<version>${kumuluzee.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.kumuluz.ee</groupId>
+			<artifactId>kumuluzee-microProfile-1.2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.25</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>1.7.25</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.kumuluz.ee</groupId>
+				<artifactId>kumuluzee-maven-plugin</artifactId>
+				<version>${kumuluzee.version}</version>
+				<executions>
+					<execution>
+						<id>package</id>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
