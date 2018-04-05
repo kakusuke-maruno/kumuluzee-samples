@@ -1,0 +1,24 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.kksk.kumuluzee.sample</groupId>
+	<artifactId>jax-rs.cdi.launch</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+		<java.version>8</java.version>
+		<file.encoding>UTF-8</file.encoding>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+		<project.build.sourceEncoding>${file.encoding}</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>${file.encoding}</project.reporting.outputEncoding>
+		<skipTests>true</skipTests>
+		<provided.scope>provided</provided.scope>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.kksk.kumuluzee.sample</groupId>
+			<artifactId>jax-rs.cdi</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+</project>
