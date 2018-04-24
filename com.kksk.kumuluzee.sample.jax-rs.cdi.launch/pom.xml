@@ -20,5 +20,10 @@
 			<artifactId>jax-rs.cdi</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>com.chromosphere</groupId>
+			<artifactId>microservice.launcher</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 	</dependencies>
 </project>
